@@ -8,10 +8,12 @@
             <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <group string="Datos de jugadores">
-                        <field name="photo" placeholder="Fotografía" widget="image" options="{'size': [150, 150]}"/>
-                       <field name="name" placeholder="Nombre del jugador"/>
-                        <field name="numero" placeholder="Número de camiseta"/>
+                    <group string="Datos de los libros">
+                    	<field name="name" placeholder="Nombre del libro"/>
+						<field name="isbn" placeholder="Nombre de identificacion del libro"/>
+						<field name="anio_edicion" placeholder="Año de edicion"/>
+						<field name="no_paginas" placeholder="Numero de paginas"/>
+						<field name="existencias" placeholder="Numero de libros en existencia"/>   
                     </group>
                 </sheet>
             </form>
@@ -24,11 +26,11 @@
 			<field name="model">library.books</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
-				<tree string="Jugadores" >
-					<field name="photo"  widget="image" options="{'size': [50, 50]}"/>
+				<tree string="Libros" >
 					<field name="name" />
-					<field name="numero" />
-					
+					<field name="anio_edicion" />
+					<field name="isbn" />
+					<field name="existencias" />
 				</tree>
 			</field>
 		</record>
@@ -39,7 +41,8 @@
 			<field name="arch" type="xml">
 				<search>
                         <field name="name"/>
-                        <field name="numero"/>
+                        <field name="isbn"/>
+						<field name="anio_edicion" />
 				</search>
 			</field>
 		</record>

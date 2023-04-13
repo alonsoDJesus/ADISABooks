@@ -17,6 +17,14 @@
 						<field name="id_categoria" placeholder="Categoria"/>   
 						<field name="id_editorial" placeholder="Editorial"/> 
                     </group>
+
+					<field name="author_id" nolabel="1">
+						<tree editable="bottom">
+							<field name="name"/>
+							<field name="a_paterno"/>
+							<field name="degree"/>
+						</tree>
+					</field>
                 </sheet>
             </form>
             </field>
@@ -49,6 +57,7 @@
 						<field name="anio_edicion" />
 						<field name="id_categoria" />
 						<field name="id_editorial" />
+						<field name="author_id" />
 				</search>
 			</field>
 		</record>

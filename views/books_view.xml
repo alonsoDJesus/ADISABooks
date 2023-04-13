@@ -13,7 +13,9 @@
 						<field name="isbn" placeholder="Nombre de identificacion del libro"/>
 						<field name="anio_edicion" placeholder="Año de edicion"/>
 						<field name="no_paginas" placeholder="Numero de paginas"/>
-						<field name="existencias" placeholder="Numero de libros en existencia"/>   
+						<field name="existencias" placeholder="Numero de libros en existencia"/> 
+						<field name="id_categoria" placeholder="Categoria"/>   
+						<field name="id_editorial" placeholder="Editorial"/> 
                     </group>
                 </sheet>
             </form>
@@ -31,6 +33,8 @@
 					<field name="anio_edicion" />
 					<field name="isbn" />
 					<field name="existencias" />
+					<field name="id_categoria" />
+					<field name="id_editorial" />
 				</tree>
 			</field>
 		</record>
@@ -43,6 +47,8 @@
                         <field name="name"/>
                         <field name="isbn"/>
 						<field name="anio_edicion" />
+						<field name="id_categoria" />
+						<field name="id_editorial" />
 				</search>
 			</field>
 		</record>

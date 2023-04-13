@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo library.teams -->	
+		<record model="ir.ui.view" id="editorials_form">
+            <field name="name">library.editorials.form</field>
+            <field name="model">library.editorials</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Datos de los libros">
+                    	<field name="name" placeholder="Nombre de la editorial"/>
+						<field name="estado" placeholder="Estado"/>
+						<field name="pais" placeholder="Pais"/>
+						<field name="books_id" placeholder="Libros"/>   
+                    </group>
+                </sheet>
+            </form>
+            </field>
+		</record>
+
+        <!-- vista tipo tree del modelo library.editorials -->	
+		<record model="ir.ui.view" id="library_editorials_tree">
+			<field name="name">library.editorials.tree</field>
+			<field name="model">library.editorials</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Editoriales" >
+					<field name="name" />
+					<field name="estado"/>
+					<field name="pais" />
+					<field name="books_id" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="library_editorials_search">
+			<field name="name">library.editorials.search</field>
+			<field name="model">library.editorials</field>
+			<field name="arch" type="xml">
+				<search>
+                        <field name="name" />
+					    <field name="estado"/>
+					    <field name="pais" />
+					    <field name="books_id" />
+				</search>
+			</field>
+		</record>
+
+
+		<!-- ACCION PARA EL MODELO library.editorials -->	
+		<record id="library_editorials_action" model="ir.actions.act_window">
+			<field name="name">Editoriales</field>
+			<field name="res_model">library.editorials</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+</odoo>

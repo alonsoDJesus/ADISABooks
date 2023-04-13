@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from odoo import models,fields
 
 class students(models.Model):
     _name = 'library.authors'

@@ -2,5 +2,6 @@
 from . import books
 from . import categorys
 from . import editorials
+from . import authors
 
 

@@ -5,10 +5,10 @@ from odoo import models,fields
 class editorials(models.Model):
     _name = 'library.editorials'
 
-    
-    id_editorial= fields.Many2one('library.books',string='Identificador de Editorial')
-    nombre= fields.Char(string='Nombre de la ')
-    estado= fields.Char(string='Estado')
-    pais= fields.Char(string='Pais')
-    
-    _order = 'id_editorial'
+    name= fields.Char(string='Lista de editoriales',required=True)
+    estado= fields.Char(string='Estado',required=True)
+    pais= fields.Char(string='Pais',required=True)
+    books_id = fields.One2many('library.books','id_editorial',string='Libros',readonly=True)
+
+    _order = 'name'
+    _sql_constraints = [('editorials_uniq', 'unique(name)', 'Editorial duplicada, intenta con otra...'),]

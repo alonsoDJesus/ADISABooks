@@ -7,7 +7,8 @@
 				<menuitem name="Categorias" action="library_categorys_action"  id="library_categorys_menu" sequence="31" parent="library_opciones_menu" />
 				<menuitem name="Editoriales" action="library_editorials_action"  id="library_editorials_menu" sequence="32" parent="library_opciones_menu" />
 				<menuitem name="Autores" action="library_authors_action"  id="library_authors_menu" sequence="33" parent="library_opciones_menu" />
-				<menuitem name="Estudiantes" action="library_students_action"  id="library_students_menu" sequence="34" parent="library_opciones_menu" />
+				<menuitem name="Estutes" action="library_students_action"  id="library_students_menu" sequence="34" parent="library_opciones_menu" />
 				<menuitem name="Carreras" action="library_careers_action"  id="library_careers_menu" sequence="35" parent="library_opciones_menu" />
+				<menuitem name="Docentes" action="library_teachers_action"  id="library_teachers_menu" sequence="36" parent="library_opciones_menu" />
 	</data>
 </odoo>

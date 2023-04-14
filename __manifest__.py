@@ -15,6 +15,7 @@
         'views/authors_view.xml',
         'views/students_view.xml',
         'views/careers_view.xml',
+        'views/teachers_view.xml',
         'views/menu_view.xml',    
     ],
     'installable': True,

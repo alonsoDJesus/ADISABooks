@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo library.teachers -->	
+		<record model="ir.ui.view" id="teachers_form">
+            <field name="name">library.teachers.form</field>
+            <field name="model">library.teachers</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Datos de los Docentes">
+                    	<field name="matricula" placeholder="Matricula"/>
+						<field name="a_paterno" placeholder="Apellido Paterno"/>
+						<field name="a_materno" placeholder="Apellido Materno"/>
+						<field name="name" placeholder="Nombre"/>
+						<field name="academia" placeholder="Academia"/> 
+                    </group>
+                </sheet>
+            </form>
+            </field>
+		</record>
+
+        <!-- vista tipo tree del modelo library.teachers -->	
+		<record model="ir.ui.view" id="library_teachers_tree">
+			<field name="name">library.teachers.tree</field>
+			<field name="model">library.teachers</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Docentes" >
+
+                    <field name="matricula" />
+					<field name="a_paterno" />
+					<field name="a_materno" />
+					<field name="name" />
+					<field name="academia" />
+                    
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="library_teachers_search">
+			<field name="name">library.teachers.search</field>
+			<field name="model">library.teachers</field>
+			<field name="arch" type="xml">
+				<search>
+                    <field name="matricula" />
+					<field name="a_paterno" />
+					<field name="a_materno" />
+					<field name="name" />
+					<field name="academia" />
+				</search>
+			</field>
+		</record>
+
+
+		<!-- ACCION PARA EL MODELO library.teachers -->	
+		<record id="library_teachers_action" model="ir.actions.act_window">
+			<field name="name">Docentes</field>
+			<field name="res_model">library.teachers</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+</odoo>

@@ -6,17 +6,15 @@ class books(models.Model):
     _name = 'library.books'
 
     isbn= fields.Char(string='ISBN')
-    name= fields.Char(string='Titulo')
-    anio_edicion= fields.Char(string='Año de edicion')
-    no_paginas= fields.Integer(string='Número de Páginas')
-    existencias= fields.Integer(string='Número de Existencia')
-    
-    _order = 'name,isbn'
-    
-class category(models.Model):
-    _name = 'library.category'
+    author=fields.Char(string='Autor')
+    name= fields.Char(string='Titulo', required=True)
+    anio_edicion= fields.Char(string='Año de edicion',required=True)
+    no_paginas= fields.Integer(string='Número de Páginas', required=True)
+    existencias= fields.Integer(string='Número de Existencia', required=True)
+    id_categoria= fields.Many2many('library.categorys',string='Categoria')
+    id_editorial= fields.Many2one('library.editorials',string='Editorial', required=True)
+    author_id = fields.Many2many( 'library.authors', 'book_id', string ='Autor' )
+    #id_author_book = fields.Many2One('library.authors_books', string='Autor', required=True)
 
-    id_categoria= fields.Many2one('library.books',string='Identificador de Categoria')
-    name= fields.Integer(string='Nombre')
-    
-    _order = 'id_categoria'
+    _order = 'name'
+    _sql_constraints = [('isbn_uniq', 'unique(isbn)', 'ISBN duplicada, intenta con otra...'),]

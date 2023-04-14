@@ -1,20 +1,19 @@
+from odoo import models, fields
 
-class students(models.Model):
+class authors(models.Model):
     _name = 'library.authors'
 
-    no_control= fields.Many2one('library.lending',string='Identificador de Editorial')
-    a_paterno= fields.Integer(string='Apelllido paterno')
-    a_materno= fields.Integer(string='Apelllido materno')
-    nombres= fields.Char(string='Nombre(s)')
-    id_carrera= fields.Many2one('library.career',string='Carrera')
-    
-    _order = 'no_control'
-    
-class career(models.Model):
-    _name = 'library.authors'
+    a_paterno = fields.Char( string='Apellido Paterno', required=True)
+    name = fields.Char( string='Nombre', required=True )
+    degree = fields.Char( string= 'Grado Académico' )
+    book_id = fields.Many2one( 'library.books', string = 'Libro' )
+    #id_author_book = fields.Many2One('library.authors_books', string = )
 
-    id_carrera= fields.One2Many('library.students','id_carrera',string='Carrera')
-    nombres= fields.Char(string='Nombre(s)')
+    _order = 'name'
+    _sql_constraints = [ ('lastName_authors_uniq', 'unique(a_paterno, name)', 'Autor duplicado, escribe uno diferente.') ]
+#class authors_books(models.Model):
+ #   _name = 'library.authors_books'
+  #  books_id = fields.One2Many( 'library.books', 'id_author_book', string = 'Libros', readonly=True )
+   # authors_id = fields.One2Many( 'library.authors', 'id_author_book', string = 'Autores', readonly=True )
     
-    
-    _order = 'id_carrera'
+

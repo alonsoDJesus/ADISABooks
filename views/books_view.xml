@@ -17,12 +17,8 @@
 						<field name="id_categoria" placeholder="Categoria"/>   
 						<field name="id_editorial" placeholder="Editorial"/> 
                     </group>
-
-<<<<<<< HEAD
 					<field name="author_id" nolabel="1">
-=======
 					<field name="author_ids" nolabel="1">
->>>>>>> cc81f62f2835c123e485b9b67e66c7f9bfdc695c
 						<tree editable="bottom">
 							<field name="name"/>
 							<field name="a_paterno"/>
@@ -61,11 +57,8 @@
 						<field name="anio_edicion" />
 						<field name="id_categoria" />
 						<field name="id_editorial" />
-<<<<<<< HEAD
 						<field name="author_id" />
-=======
 						<field name="author_ids" />
->>>>>>> cc81f62f2835c123e485b9b67e66c7f9bfdc695c
 				</search>
 			</field>
 		</record>

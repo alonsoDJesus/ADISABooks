@@ -6,5 +6,11 @@
 				<menuitem name="Libros" action="library_books_action"  id="library_books_menu" sequence="30" parent="library_opciones_menu" />
 				<menuitem name="Categorias" action="library_categorys_action"  id="library_categorys_menu" sequence="31" parent="library_opciones_menu" />
 				<menuitem name="Editoriales" action="library_editorials_action"  id="library_editorials_menu" sequence="32" parent="library_opciones_menu" />
+<<<<<<< HEAD
+=======
+				<menuitem name="Autores" action="library_authors_action"  id="library_authors_menu" sequence="33" parent="library_opciones_menu" />
+				<menuitem name="Estudiantes" action="library_students_action"  id="library_students_menu" sequence="34" parent="library_opciones_menu" />
+				<menuitem name="Carreras" action="library_careers_action"  id="library_careers_menu" sequence="35" parent="library_opciones_menu" />
+>>>>>>> cc81f62f2835c123e485b9b67e66c7f9bfdc695c
 	</data>
 </odoo>

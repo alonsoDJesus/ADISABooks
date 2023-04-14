@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo library.students -->	
+		<record model="ir.ui.view" id="students_form">
+            <field name="name">library.students.form</field>
+            <field name="model">library.students</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Datos de los estudiantes">
+                    	<field name="no_control" placeholder="Numero de Control"/>
+						<field name="a_paterno" placeholder="Apellido Paterno"/>
+						<field name="a_materno" placeholder="Apellido Materno"/>
+						<field name="name" placeholder="Nombre"/>
+						<field name="id_carrera" placeholder="Carrera"/> 
+                    </group>
+                </sheet>
+            </form>
+            </field>
+		</record>
+
+        <!-- vista tipo tree del modelo library.students -->	
+		<record model="ir.ui.view" id="library_students_tree">
+			<field name="name">library.students.tree</field>
+			<field name="model">library.students</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Estudiantes" >
+
+                    <field name="no_control" />
+					<field name="a_paterno" />
+					<field name="a_materno" />
+					<field name="name" />
+					<field name="id_carrera" /> 
+                    
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="library_students_search">
+			<field name="name">library.students.search</field>
+			<field name="model">library.students</field>
+			<field name="arch" type="xml">
+				<search>
+                        <field name="no_control" />
+					    <field name="a_paterno" />
+					    <field name="a_materno" />
+					    <field name="name" />
+					    <field name="id_carrera" />
+				</search>
+			</field>
+		</record>
+
+
+		<!-- ACCION PARA EL MODELO library.students -->	
+		<record id="library_students_action" model="ir.actions.act_window">
+			<field name="name">Estudiantes</field>
+			<field name="res_model">library.students</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+</odoo>

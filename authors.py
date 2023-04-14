@@ -7,6 +7,10 @@ class authors(models.Model):
     name = fields.Char( string='Nombre', required=True )
     degree = fields.Char( string= 'Grado Académico' )
     book_id = fields.Many2one( 'library.books', string = 'Libro' )
+<<<<<<< HEAD
+=======
+    book_ids = fields.One2many( 'library.books', 'author_id', string = 'Libros' )
+>>>>>>> cc81f62f2835c123e485b9b67e66c7f9bfdc695c
     #id_author_book = fields.Many2One('library.authors_books', string = )
 
     _order = 'name'

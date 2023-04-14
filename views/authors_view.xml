@@ -15,9 +15,11 @@
                     </group>
 
 
-                    <field name="book_ids" nolabel="1">
+                    <field name="book2_ids" nolabel="1" readonly="True">
 						<tree editable="bottom">
+                            <field name="isbn" />
 							<field name="name"/>
+                            <field name="anio_edicion" />
 						</tree>
 					</field>
 

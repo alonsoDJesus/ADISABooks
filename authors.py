@@ -6,8 +6,9 @@ class authors(models.Model):
     a_paterno = fields.Char( string='Apellido Paterno', required=True)
     name = fields.Char( string='Nombre', required=True )
     degree = fields.Char( string= 'Grado Académico' )
-    book_id = fields.Many2one( 'library.books', string = 'Libro' )
-    book_ids = fields.One2many( 'library.books', 'author_id', string = 'Libros' )
+    ##book_id = fields.Many2one( 'library.books', string = 'Libro' )
+    ##book_ids = fields.One2many( 'library.books', 'author_id', string = 'Libros' )
+    book2_ids = fields.Many2many('library.books',string='Libros')
     #id_author_book = fields.Many2One('library.authors_books', string = )
 
     _order = 'name'

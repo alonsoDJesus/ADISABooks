@@ -15,10 +15,10 @@
 						<field name="no_paginas" placeholder="Numero de paginas"/>
 						<field name="existencias" placeholder="Numero de libros en existencia"/> 
 						<field name="id_categoria" placeholder="Categoria"/>   
-						<field name="id_editorial" placeholder="Editorial"/> 
+						<field name="id_editorial" placeholder="Editorial"/>
                     </group>
 
-					<field name="author_ids" nolabel="1">
+					<field name="author2_ids" nolabel="1">
 						<tree editable="bottom">
 							<field name="name"/>
 							<field name="a_paterno"/>
@@ -57,7 +57,7 @@
 						<field name="anio_edicion" />
 						<field name="id_categoria" />
 						<field name="id_editorial" />
-						<field name="author_ids" />
+						<field name="author2_ids" />
 				</search>
 			</field>
 		</record>

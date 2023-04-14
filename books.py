@@ -12,8 +12,9 @@ class books(models.Model):
     existencias= fields.Integer(string='Número de Existencia', required=True)
     id_categoria= fields.Many2one('library.categorys',string='Categoria', required=True)
     id_editorial= fields.Many2one('library.editorials',string='Editorial', required=True)
-    author_ids = fields.One2many( 'library.authors', 'book_id', string = 'Autor' )
-    author_id = fields.Many2one( 'library.authors', string = 'Autores' )
+    author2_ids = fields.Many2many('library.authors',string='Autor(es)')
+    ##author_ids = fields.One2many( 'library.authors', 'book_id', string = 'Autor' )
+    ##author_id = fields.Many2one( 'library.authors', string = 'Autores' )
     #id_author_book = fields.Many2One('library.authors_books', string='Autor', required=True)
     
     _order = 'name,isbn'

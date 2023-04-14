@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo library.authors -->	
+		<record model="ir.ui.view" id="authors_form">
+            <field name="name">library.authors.form</field>
+            <field name="model">library.authors</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Datos de autores">
+                        <field name="name" placeholder="Nombre"/>
+                        <field name="a_paterno" placeholder="Apellido"/>
+                        <field name="degree" placeholder="Grado Académico"/>
+                    </group>
+
+
+                    <field name="book_ids" nolabel="1">
+						<tree editable="bottom">
+							<field name="name"/>
+						</tree>
+					</field>
+
+                </sheet>
+            </form>
+            </field>
+		</record>
+
+        <!-- vista tipo tree del modelo library.authors -->	
+		<record model="ir.ui.view" id="library_authors_tree">
+			<field name="name">library.authors.tree</field>
+			<field name="model">library.authors</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Jugadores" >
+                    <field name="name"/>
+                    <field name="a_paterno" />
+                    <field name="degree"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="library_authors_search">
+			<field name="name">library.authors.search</field>
+			<field name="model">library.authors</field>
+			<field name="arch" type="xml">
+				<search>
+                    <field name="name"/>
+                    <field name="a_paterno" />
+                    <field name="degree"/>
+				</search>
+			</field>
+		</record>
+
+        <record model="ir.ui.view" id="library_authors_kanban">
+            <field name="name">library.authors.kanban</field>
+            <field name="model">library.authors</field>
+            <field name="arch" type="xml">
+                <kanban class="o_res_partner_kanban">
+
+
+                        <field name="name"/>
+                        <field name="a_paterno" />
+                        <field name="degree"/>
+                        <templates> 
+                            <t t-name="kanban-box"> 
+                                <div t-attf-class="oe_kanban_global_click"> 
+                                    <div class="oe_kanban_details">  
+                                        <strong class="o_kanban_record_title">  
+                                            <field name="a_paterno"/>  
+                                        </strong> 
+                                        <div t-if="record.name.value">
+                                            <t t-esc="record.name.value"/> 
+                                        </div>  
+                                        <div t-if="record.degree.value">
+                                            <t t-esc="record.degree.value"/> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            </t> 
+                        </templates>
+                </kanban>
+            </field>
+        </record>
+
+
+		<!-- ACCION PARA EL MODELO library.authors -->	
+		<record id="library_authors_action" model="ir.actions.act_window">
+			<field name="name">Autores</field>
+			<field name="res_model">library.authors</field>
+			<field name="view_mode">kanban,form,tree</field>
+		</record>
+
+</odoo>

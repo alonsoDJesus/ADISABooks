@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo library.careers -->	
+		<record model="ir.ui.view" id="careers_form">
+            <field name="name">library.careers.form</field>
+            <field name="model">library.careers</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Datos de las carreras">
+                        <field name="name" placeholder="Nombre"/>
+                    </group>
+                </sheet>
+            </form>
+            </field>
+		</record>
+
+        <!-- vista tipo tree del modelo library.careers -->	
+		<record model="ir.ui.view" id="library_careers_tree">
+			<field name="name">library.careers.tree</field>
+			<field name="model">library.careers</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Carreras" >
+                    <field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="library_careers_search">
+			<field name="name">library.careers.search</field>
+			<field name="model">library.careers</field>
+			<field name="arch" type="xml">
+				<search>
+                    <field name="name"/>
+				</search>
+			</field>
+		</record>
+
+        <record model="ir.ui.view" id="library_careers_kanban">
+            <field name="name">library.careers.kanban</field>
+            <field name="model">library.careers</field>
+            <field name="arch" type="xml">
+                <kanban class="o_res_partner_kanban">
+
+
+                        <field name="name"/>
+                        <templates> 
+                            <t t-name="kanban-box"> 
+                                <div t-attf-class="oe_kanban_global_click"> 
+                                    <div class="oe_kanban_details">  
+                                        <div t-if="record.name.value">
+                                            <t t-esc="record.name.value"/> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            </t> 
+                        </templates>
+                </kanban>
+            </field>
+        </record>
+
+
+		<!-- ACCION PARA EL MODELO library.careers -->	
+		<record id="library_careers_action" model="ir.actions.act_window">
+			<field name="name">Autores</field>
+			<field name="res_model">library.careers</field>
+			<field name="view_mode">kanban,form,tree</field>
+		</record>
+
+</odoo>

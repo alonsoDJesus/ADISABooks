@@ -9,6 +9,6 @@ class teachers(models.Model):
     name = fields.Char(string='Nombre(s)')
     a_paterno = fields.Char(string='Apellido Paterno')
     a_materno = fields.Char(string='Apellido Materno')
-    academia = fields.Many2one('library.careers',string='Academia')
+    academia = fields.Many2one('library.careers', string='Academia')
     
     _order = 'name'

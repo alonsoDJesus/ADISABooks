@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from odoo import models,fields
+from odoo import models,fields, api
 
 class students(models.Model):
     _name = 'library.students'
 
-    no_control = fields.Char(string='Numero de Control', required=True)
+    no_control = fields.Char(string='Numero de Control', readonly = True)
     a_paterno = fields.Char(string='Apelllido paterno', required=True)
     a_materno= fields.Char(string='Apelllido materno', required=True)
     name = fields.Char(string='Nombre(s)', required=True)
@@ -12,6 +12,12 @@ class students(models.Model):
     
     _order = 'no_control'
     _sql_constraints = [ ('id_students_uniq', 'unique(no_control)', 'No. de Control duplicado: ingrese uno distinto') ]
+
+    @api.model
+    def create(self,vals):
+        vals['no_control'] = self.env['ir.sequence'].next_by_code('library.students.nocontrol')
+
+        return super(students,self).create(vals)
     
 class career(models.Model):
     _name = 'library.careers'

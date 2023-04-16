@@ -29,6 +29,20 @@
             </form>
             </field>
 		</record>
+		<record model="ir.ui.view" id="view_categorys_form">
+			<field name="name">library.categorys.form</field>
+			<field name="model">library.categorys</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="name"/>
+							<field name="books_id"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
 
         <!-- vista tipo tree del modelo library.books -->	
 		<record model="ir.ui.view" id="library_books_tree">

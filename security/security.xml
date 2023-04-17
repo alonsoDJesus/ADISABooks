@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="prestamos_id" model="ir.module.category">
+            <field name="name">Prestamos Management</field>
+        </record>
+        <record id="prestamos_admin" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="prestamos_id"/>
+        </record>
+        <record id="prestamos_students" model="res.groups">
+            <field name="name">Estudiante</field>
+            <field name="category_id" ref="prestamos_id"/>
+        </record>
+        <record id="prestamos_teachers" model="res.groups">
+            <field name="name">Maestro</field>
+            <field name="category_id" ref="prestamos_id"/>
+        </record>
+        
+    </data>
+</odoo>

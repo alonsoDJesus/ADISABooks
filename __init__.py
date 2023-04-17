@@ -5,5 +5,6 @@ from . import editorials
 from . import authors
 from . import students
 from . import teachers
+from . import prestamos
 
 

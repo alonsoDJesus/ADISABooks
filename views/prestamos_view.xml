@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo library.teams -->	
+		<record model="ir.ui.view" id="prestamos_form">
+            <field name="name">library.prestamos.form</field>
+            <field name="model">library.prestamos</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="tipo"/>
+                </header>
+                <sheet>
+                    <group string="Datos de los prestamos">
+						<field name="name"/>
+                    	<field name="book_id"/>
+						<field name="fecha_prestamo" placeholder="Fecha en que se presto el libro"/>
+						<field name="fecha_entrega" placeholder="Fecha en que se debe devolver"/>
+						<field name="tipo"/>  
+                        <field name ="id_estudiante" attrs="{'invisible': [('tipo','in',('nin','teacher'))]}"/>
+                        <field name ="id_docente" attrs="{'invisible': [('tipo','in',('nin','student'))]}"/>
+                        
+
+                    </group>
+                </sheet>
+            </form>
+            </field>
+		</record>
+
+        <!-- vista tipo tree del modelo library.prestamos -->	
+		<record model="ir.ui.view" id="library_prestamos_tree">
+			<field name="name">library.prestamos.tree</field>
+			<field name="model">library.prestamos</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Prestamos" >
+					<field name="name"/>
+					<field name="book_id"/>
+					<field name="fecha_prestamo"/>
+					<field name="fecha_entrega"/>
+					<field name="tipo"/>  
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="library_prestamos_search">
+			<field name="name">library.prestamos.search</field>
+			<field name="model">library.prestamos</field>
+			<field name="arch" type="xml">
+				<search>
+                       <field name="book_id"/>
+						<field name="fecha_prestamo"/>
+						<field name="fecha_entrega"/>
+						<field name="tipo"/>  
+				</search>
+			</field>
+		</record>
+        <record id="sequence_proyect_folio_prestamos" model="ir.sequence">
+            <field name="name">Secuencia de folios</field>
+            <field name="code">library.prestamos_folio</field>
+            <field name="active">TRUE</field>
+            <field name="prefix">F</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+		<!-- ACCION PARA EL MODELO library.prestamos -->	
+		<record id="library_prestamos_action" model="ir.actions.act_window">
+			<field name="name">Prestamos</field>
+			<field name="res_model">library.prestamos</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+</odoo>

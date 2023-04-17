@@ -9,6 +9,8 @@
     'website': 'http://www.itsa.edu.mx',
     'depends': ['base'],
     'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
         'views/books_view.xml',
         'views/categorys_view.xml',
         'views/editorials_view.xml',
@@ -16,6 +18,7 @@
         'views/students_view.xml',
         'views/careers_view.xml',
         'views/teachers_view.xml',
+        'views/prestamos_view.xml',
         'views/menu_view.xml',    
     ],
     'installable': True,

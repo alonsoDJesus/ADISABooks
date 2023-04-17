@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import models,fields
 
-
 class editorials(models.Model):
     _name = 'library.editorials'
 

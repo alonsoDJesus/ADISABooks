@@ -10,5 +10,6 @@
 				<menuitem name="Estudiantes" action="library_students_action"  id="library_students_menu" sequence="34" parent="library_opciones_menu" />
 				<menuitem name="Carreras" action="library_careers_action"  id="library_careers_menu" sequence="35" parent="library_opciones_menu" />
 				<menuitem name="Docentes" action="library_teachers_action"  id="library_teachers_menu" sequence="36" parent="library_opciones_menu" />
+				<menuitem name="Prestamos" action="library_prestamos_action"  id="library_prestamos_menu" sequence="37" parent="library_opciones_menu" />
 	</data>
 </odoo>

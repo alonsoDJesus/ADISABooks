@@ -11,9 +11,10 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'reports/prestamos_report_template.xml',
         'views/books_view.xml',
-        'views/categorys_view.xml',
         'views/editorials_view.xml',
+        'views/categorys_view.xml',
         'views/authors_view.xml',
         'views/students_view.xml',
         'views/careers_view.xml',

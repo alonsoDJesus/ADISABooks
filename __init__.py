@@ -6,5 +6,5 @@ from . import authors
 from . import students
 from . import teachers
 from . import prestamos
-
+from .reports import prestamos_report_template
 

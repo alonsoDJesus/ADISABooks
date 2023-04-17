@@ -4,7 +4,7 @@ from odoo import models,fields
 class editorials(models.Model):
     _name = 'library.editorials'
 
-    name= fields.Char(string='Lista de editoriales',required=True)
+    name= fields.Char(string='Nombre',required=True)
     estado= fields.Char(string='Estado',required=True)
     pais= fields.Char(string='Pais',required=True)
     books_id = fields.One2many('library.books','id_editorial',string='Libros',readonly=True)

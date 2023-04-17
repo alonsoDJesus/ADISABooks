@@ -8,8 +8,9 @@
             <field name="arch" type="xml">
             <form>
                 <header>
-                    <field name="tipo"/>
-					 <field name="state" widget="statusbar"/>
+					<button name="registrar" string="Registrar" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','cre')]}"/>	
+                    <field name="state" widget="statusbar"/>
+					<field name="tipo"/>  
                 </header>
                 <sheet>
                     <group string="Datos de los prestamos">
@@ -40,6 +41,7 @@
 					<field name="fecha_prestamo"/>
 					<field name="fecha_entrega"/>
 					<field name="tipo"/>  
+					<field name="state"/>
 				</tree>
 			</field>
 		</record>
@@ -52,7 +54,8 @@
                        <field name="book_id"/>
 						<field name="fecha_prestamo"/>
 						<field name="fecha_entrega"/>
-						<field name="tipo"/>  
+						<field name="tipo"/> 
+						<field name="state"/> 
 				</search>
 			</field>
 		</record>

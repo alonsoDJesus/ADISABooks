@@ -15,6 +15,10 @@ class prestamos(models.Model):
     
 
     _order = 'name'
+    def registrar(self):
+        vals={}
+        vals['state'] = 'rea'
+        self.write(vals)
 
     @api.model
     def create(self, vals):

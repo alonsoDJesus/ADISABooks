@@ -64,7 +64,7 @@
         />
 
         <record id="prestamos_report" model="ir.actions.report">
-            <field name="paperformat_id"  ref="library.reporte_format"/>
+            <field name="paperformat_id"  />
         </record>
     </data>
 </odoo> 

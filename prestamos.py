@@ -11,6 +11,8 @@ class prestamos(models.Model):
     tipo = fields.Selection([('nin','Ninguno'),('student','Estudiante'),('teacher','Maestro')],string='Usuario',default='nin')
     id_estudiante = fields.Many2one('library.students',string='Estudiante')
     id_docente = fields.Many2one('library.teachers',string='Docente')
+    state = fields.Selection([('cre','Creado'),('rea','Realizo'),('can','Cancelado')],string='Estado',readonly=True, default='cre')
+    
 
     _order = 'name'
 

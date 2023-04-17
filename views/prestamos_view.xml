@@ -9,6 +9,7 @@
             <form>
                 <header>
                     <field name="tipo"/>
+					 <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>
                     <group string="Datos de los prestamos">
